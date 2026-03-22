@@ -41,17 +41,26 @@ Material:
     - _DepthDetectionConstrast: 2
     - _DepthDetectionDistance: 50
     - _DepthDetectionInteriorIntensity: 0.4
+    - _DepthDistance: 4
+    - _DepthIntensity: 1
     - _EdgeBorderOpacityContrast: 5
     - _EdgeBorderOpacityIntensity: 1.5
     - _EdgeCenterOpacityContrast: 2
-    - _EdgeIntensity: 1
+    - _EdgeIntensity: 2
+    - _FresnelIntensity: 0
+    - _FresnelPower: 2
+    - _HexColorIntensity: 1
     - _HexStrength: 2
     - _InteriorIntensity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ScrollSpeed: 0.00001
     - _TimeSpeed: 1
     m_Colors:
     - _Color: {r: 0, g: 0.9215686, b: 1, a: 1}
+    - _EdgeColor: {r: 0, g: 0.92156863, b: 1, a: 1}
+    - _HexSize: {r: 30, g: 30, b: 0, a: 0}
+    - _InteriorColor: {r: 0, g: 0, b: 0, a: 1}
     - _UVTile: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
