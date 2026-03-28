@@ -133,7 +133,7 @@ Material:
     - _FoamDistorsionIntensity: 0
     - _FoamSize: 0.134
     - _Foam_Distortion_Intensity: 0.9
-    - _Foam_Size: 0.054
+    - _Foam_Size: 0.066
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -152,7 +152,7 @@ Material:
     - _SecondNoiseSize: 0
     - _Second_Noise_Size: 6
     - _ShoreFoamDistance: 0.3
-    - _Shore_Foam_Distance: 0.3
+    - _Shore_Foam_Distance: 0.81
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

@@ -101,7 +101,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Displacment_Intensity: 0
+    - _Displacment_Intensity: 0.33
     - _Distortion_Intensity: 0.2
     - _DstBlend: 0
     - _DstBlendAlpha: 0
@@ -115,7 +115,7 @@ Material:
     - _Metallic: 0
     - _Noise_Speed: 0.1
     - _Normal_Scale: 0.1
-    - _Normal_Speed: 0.5
+    - _Normal_Speed: 0
     - _OcclusionStrength: 1
     - _Opacity_Distortion_Intensity: 0.1
     - _Opacity_Distortion_Scale: 1
