@@ -1,69 +1,76 @@
 #ifndef VORONOI_CUSTOM_INCLUDED
 #define VORONOI_CUSTOM_INCLUDED
 
-void VoronoiCustom_float(float2 UV, float Phase, out float Distance, out float2 CellVector)
+void VoronoiCustom_float(float2 uv, float phase, out float distanceToEdge, out float2 nearestCellVector)
 {
-    float2 n = floor(UV);
-    float2 f = frac(UV);
+    float2 cellBase = floor(uv);
+    float2 localUV = frac(uv);
 
-    float2 mg, mr;
-    float md = 8.0;
+    float2 nearestCellOffset;
+    float2 nearestVector;
+    float minDistance = 8.0;
 
-    // -------- PRIMERA PASADA --------
-    for (int j = -1; j <= 1; j++)
+    // Find nearest cell
+    for (int y = -1; y <= 1; y++)
     {
-        for (int i = -1; i <= 1; i++)
+        for (int x = -1; x <= 1; x++)
         {
-            float2 g = float2(i, j);
+            float2 neighborOffset = float2(x, y);
 
-            float2x2 m = float2x2(15.27, 47.63, 99.41, 89.98);
-            float2 uvr = frac(sin(mul(g + n, m)) * 46839.32);
+            float2x2 randomMatrix = float2x2(15.27, 47.63, 99.41, 89.98);
+            float2 randomValues = frac(sin(mul(neighborOffset + cellBase, randomMatrix)) * 46839.32);
 
-            float2 o = float2(
-                sin(uvr.y * Phase) * 0.5 + 0.5,
-                cos(uvr.x * Phase) * 0.5 + 0.5
+            float2 pointOffset = float2(
+                sin(randomValues.y * phase) * 0.5 + 0.5,
+                cos(randomValues.x * phase) * 0.5 + 0.5
             );
 
-            float2 r = g + o - f;
-            float d = dot(r, r);
+            float2 vectorToPoint = neighborOffset + pointOffset - localUV;
+            float sqrDistance = dot(vectorToPoint, vectorToPoint);
 
-            if (d < md)
+            if (sqrDistance < minDistance)
             {
-                md = d;
-                mr = r;
-                mg = g;
+                minDistance = sqrDistance;
+                nearestVector = vectorToPoint;
+                nearestCellOffset = neighborOffset;
             }
         }
     }
 
-    // -------- SEGUNDA PASADA --------
-    md = 8.0;
+    // Distance to borders
+    minDistance = 8.0;
 
-    for (int j = -2; j <= 2; j++)
+    for (int y = -2; y <= 2; y++)
     {
-        for (int i = -2; i <= 2; i++)
+        for (int x = -2; x <= 2; x++)
         {
-            float2 g = mg + float2(i, j);
+            float2 neighborOffset = nearestCellOffset + float2(x, y);
 
-            float2x2 m = float2x2(15.27, 47.63, 99.41, 89.98);
-            float2 uvr = frac(sin(mul(g + n, m)) * 46839.32);
+            float2x2 randomMatrix = float2x2(15.27, 47.63, 99.41, 89.98);
+            float2 randomValues = frac(sin(mul(neighborOffset + cellBase, randomMatrix)) * 46839.32);
 
-            float2 o = float2(
-                sin(uvr.y * Phase) * 0.5 + 0.5,
-                cos(uvr.x * Phase) * 0.5 + 0.5
+            float2 pointOffset = float2(
+                sin(randomValues.y * phase) * 0.5 + 0.5,
+                cos(randomValues.x * phase) * 0.5 + 0.5
             );
 
-            float2 r = g + o - f;
+            float2 vectorToPoint = neighborOffset + pointOffset - localUV;
 
-            if (dot(mr - r, mr - r) > 0.0001)
+            // Avoid same point
+            if (dot(nearestVector - vectorToPoint, nearestVector - vectorToPoint) > 0.0001)
             {
-                md = min(md, dot(0.5 * (mr + r), normalize(r - mr)));
+                float edgeDistance = dot(
+                    0.5 * (nearestVector + vectorToPoint),
+                    normalize(vectorToPoint - nearestVector)
+                );
+
+                minDistance = min(minDistance, edgeDistance);
             }
         }
     }
 
-    Distance = md;
-    CellVector = mr;
+    distanceToEdge = minDistance;
+    nearestCellVector = nearestVector;
 }
 
 #endif
