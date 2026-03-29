@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8085683847968761290
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CustomVertexPaint
+  m_Shader: {fileID: -6465566751694194690, guid: 17f0cad101ceac74d828dd7b7b506a74, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _A_Abledo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _A_Albedo:
+        m_Texture: {fileID: 2800000, guid: f32158ce34a10d14499736395c929f7e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _A_MAOHS:
+        m_Texture: {fileID: 2800000, guid: 3044f904992e0ba4488ca624f64c4a6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _A_Normal:
+        m_Texture: {fileID: 2800000, guid: e4df562360a46244ea5cbdc370ce036e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _B_Albedo:
+        m_Texture: {fileID: 2800000, guid: 707355b53b422974ea75ec94ea88778d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _B_MAOHS:
+        m_Texture: {fileID: 2800000, guid: fd14513970ff2a040a4171f76d7cce8a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _B_Normal:
+        m_Texture: {fileID: 2800000, guid: 89323180e2e8b064693456478ce554b4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BlendDistance: 0.7
+    - _Blend_Distance: 0.1
+    - _NoiseScale: 0.3
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SnowAO: 0
+    - _SnowMetallic: 0
+    - _SnowSmoothness: 0.02
+    - _Snow_AO: 0
+    - _Snow_Metallic: 0
+    - _Snow_Smoothness: 0.02
+    - _UV_Scale: 0.2
+    - _Uv_Scales: 1
+    - _Vertical_Displacement: 4
+    m_Colors: []
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
