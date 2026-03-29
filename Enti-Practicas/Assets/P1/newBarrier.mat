@@ -48,11 +48,13 @@ Material:
     - _EdgeBorderOpacityContrast: 5
     - _EdgeBorderOpacityIntensity: 1.5
     - _EdgeCenterOpacityContrast: 2
-    - _EdgeIntensity: 5
+    - _EdgeIntensity: 6.92
     - _EdgeShine: 1
-    - _EdgeWidth: 0
+    - _EdgeWidth: 0.9
     - _FresnelIntensity: 20
     - _FresnelPower: 6
+    - _GlowIntensity: 1
+    - _GlowWidth: 1.48
     - _HexColorIntensity: 1
     - _HexStrength: 2
     - _InteriorIntensity: 1
