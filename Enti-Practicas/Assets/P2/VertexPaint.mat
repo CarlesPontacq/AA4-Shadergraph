@@ -40,6 +40,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: f32158ce34a10d14499736395c929f7e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _A_Albedo:
+        m_Texture: {fileID: 2800000, guid: f32158ce34a10d14499736395c929f7e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _A_MAOHS:
         m_Texture: {fileID: 2800000, guid: 3044f904992e0ba4488ca624f64c4a6e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -104,6 +108,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_662b5534c8fd451ca67a991577e26b38_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3044f904992e0ba4488ca624f64c4a6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_6ac517f1f4c1471ca0547163cdbd6206_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: fd14513970ff2a040a4171f76d7cce8a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -122,6 +134,7 @@ Material:
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
+    - _BlendDistance: 0.807
     - _BlendModePreserveSpecular: 1
     - _Blend_Distance: 0.6
     - _BumpScale: 1
@@ -138,7 +151,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NoiseScale: 0.94
+    - _NoiseScale: 0.35
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -146,6 +159,9 @@ Material:
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
+    - _SnowAO: 0
+    - _SnowMetallic: 0
+    - _SnowSmoothness: 0.02
     - _Snow_AO: 0
     - _Snow_Metallic: 0
     - _Snow_Smoothness: 0.02
@@ -153,8 +169,9 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _UV_Scale: 0.2
     - _Uv_Scales: 0.2
-    - _Vertical_Displacement: 2
+    - _Vertical_Displacement: 4.89
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
